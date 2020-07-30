@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    /* Bottom left text */
+    .bottom-left {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+    }
+
+    /* Top left text */
+    .top-left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+    }
+
+    /* Top right text */
+    .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
+
+    /* Bottom right text */
+    .bottom-right {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+    }
+
+    /* Centered text */
+    .centered {
+        position: absolute;
+        color: #1b1e21;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 auto;
+        width: 100px;
+        height:150px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .w3review{
+        overflow-y: scroll;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        margin: 0 auto;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 10px;
+        max-width: 90px;
+        max-height:140px;
+        word-wrap: break-word;
+    }
+</style>
+<body>
+<div id="image" class="container">
+    <img src="data:image/png;base64,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">
+<div id="text" class="centered">
+<p id="w3review" class="w3review" name="w3review" rows="4" cols="20">
+    jcndhcbwyfbyubyubeubebuebvyubeuvbuyebvubefvubeubveuvuyefbvuybefuvybfeybfeuybvuyfbvfubyfbyufebvuybefuvbyufbvuyfdbyvubufyvbufdybvfubv
+</p>
+</div>
+</div>
+<div>
+<textarea id="w3review2" name="w3review2" rows="4" cols="50" onkeyup="textChange(this.value)" onchange="textChange(document.getElementById('#w3review2').value)">
+</textarea>
+</div>
+</body>
+<script language="JavaScript" type="text/javascript">
+    function textChange(typeTextArea){
+        document.getElementById("w3review").innerHTML = typeTextArea;
+        var elem = document.getElementById('w3review');
+        elem.scrollTop =elem.scrollHeight;
+        console.log(typeTextArea);
+    }
+</script>
+</html>
